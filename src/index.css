@@ -9,13 +9,58 @@
     -moz-transform: translate(0, 0) rotate(0);
     -ms-transform: translate(0, 0) rotate(0);
     -o-transform: translate(0, 0) rotate(0);
-}
+  }
   100% {
     transform: translate(-2px, 0) rotate(-4deg);
     -webkit-transform: translate(-2px, 0) rotate(-4deg);
     -moz-transform: translate(-2px, 0) rotate(-4deg);
     -ms-transform: translate(-2px, 0) rotate(-4deg);
     -o-transform: translate(-2px, 0) rotate(-4deg);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+    filter: blur(5px);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -webkit-filter: blur(5px);
+}
+  to {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-filter: blur(0px);
+}
+}
+@keyframes fadeOutScale {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(5px);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-filter: blur(5px);
+}
+  to {
+    transform: scale(0);
+    opacity: 0;
+    filter: blur(0px);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-filter: blur(0px);
 }
 }
 
@@ -23,9 +68,35 @@
   .vibrate {
     animation: vibrate 0.4s infinite;
     -webkit-animation: vibrate 0.4s infinite;
-}
+  }
 
   .hundertpercent {
     height: 100%;
   }
+
+  .animateLi {
+    transform: scale(0.5);
+    opacity: 0;
+    filter: blur(3px);
+    animation-delay: 0.4s;
+    animation: fadeInScale 0.5s ease forwards;
+    -webkit-animation: fadeInScale 0.5s ease forwards;
+    -webkit-filter: blur(3px);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+  .animateLiOut {
+    transform: scale(1);
+    opacity: 0;
+    filter: blur(0px);
+    animation: fadeInScale 0.5s ease forwards;
+    -webkit-animation: fadeInScale 0.5s ease forwards;
+    -webkit-filter: blur(0px);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
 }

@@ -104,7 +104,7 @@ const Services = () => {
       </div>
 
       <div className='container mx-auto px-4'>
-        <h2 className='text-3xl text-orange-600'>Naše Specializace​</h2>
+        <h2 className='text-3xl text-orange-600 mb-5'>Naše Specializace​</h2>
         <p className='text-2xl'>
           Naše společnost zaměstnává výhradně odborníky vyučené v oboru.
         </p>
