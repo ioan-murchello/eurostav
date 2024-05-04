@@ -64,7 +64,7 @@ const SmallMenu = ({ setOpen, isOpen }) => {
   return (
     <div ref={scope}>
       <nav
-        className={`flex w-full h-full flex-col fixed top-0 left-0 translate-x-[-100%]  ease-in-out duration-500 z-40 gap-y-12 p-5 bg-white/95 justify-center lg:hidden `}
+        className={`flex w-full h-full flex-col fixed top-0 left-0 ease-in-out duration-500 z-40 gap-y-12 p-5 bg-white/95 justify-center lg:hidden `}
       >
         <ul className='flex flex-col h-full gap-x-5 gap-y-5 pt-8'>
           <li>
