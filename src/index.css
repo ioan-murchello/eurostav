@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    -webkit-transform: translate(0, 0) rotate(0);
+    -moz-transform: translate(0, 0) rotate(0);
+    -ms-transform: translate(0, 0) rotate(0);
+    -o-transform: translate(0, 0) rotate(0);
+}
+  100% {
+    transform: translate(-2px, 0) rotate(-4deg);
+    -webkit-transform: translate(-2px, 0) rotate(-4deg);
+    -moz-transform: translate(-2px, 0) rotate(-4deg);
+    -ms-transform: translate(-2px, 0) rotate(-4deg);
+    -o-transform: translate(-2px, 0) rotate(-4deg);
+}
+}
+
+@layer components {
+  .vibrate {
+    animation: vibrate 0.4s infinite;
+    -webkit-animation: vibrate 0.4s infinite;
+}
+
+  .hundertpercent {
+    height: 100%;
+  }
+}
