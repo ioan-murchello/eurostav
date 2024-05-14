@@ -21,49 +21,49 @@ const FasadTypes = () => {
         </p>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-        <div className='w-full max-h-48 flex items-center'>
+        <div className='w-full h-48 flex items-center overflow-hidden'>
           <img
             className='w-full h-full object-cover'
             src='https://www.eurokvalit.eu/wp-content/uploads/2021/04/IMG_2352-1024x575.jpg'
             alt=''
           />
         </div>
-        <div className='w-full max-h-48 flex items-cente'>
+        <div className='w-full h-48 flex items-center overflow-hidden'>
           <img
             className='w-full h-full object-cover'
             src='https://www.eurokvalit.eu/wp-content/uploads/2021/04/IMG_2306-1024x575.jpg'
             alt=''
           />
         </div>
-        <div className='w-full max-h-48 flex items-cente'>
+        <div className='w-full h-48 flex items-center overflow-hidden'>
           <img
             className='w-full h-full object-cover'
             src='https://www.eurokvalit.eu/wp-content/uploads/2021/04/IMG_2352-1024x575.jpg'
             alt=''
           />
         </div>
-        <div className='w-full max-h-48 flex items-cente'>
+        <div className='w-full h-48 flex items-center overflow-hidden'>
           <img
             className='w-full h-full object-cover'
             src='https://www.eurokvalit.eu/wp-content/uploads/2021/04/IMG_2352-1024x575.jpg'
             alt=''
           />
         </div>
-        <div className='w-full max-h-48 flex items-cente'>
+        <div className='w-full h-48 flex items-center overflow-hidden'>
           <img
             className='w-full h-full  object-cover'
             src='https://www.eurokvalit.eu/wp-content/uploads/2021/04/IMG_2352-1024x575.jpg'
             alt=''
           />
         </div>
-        <div className='w-full max-h-48 flex items-center'>
+        <div className='w-full h-48 flex items-centerr overflow-hidden'>
           <img
             className='w-full h-full  object-cover'
             src='https://www.eurokvalit.eu/wp-content/uploads/2021/04/OXO01435-HDR-L-1024x683.jpg'
             alt=''
           />
         </div>
-        <div className='w-full max-h-48 flex items-center'>
+        <div className='w-full h-48 flex items-center overflow-hidden'>
           <img
             className='w-full h-full object-cover'
             src='https://www.eurokvalit.eu/wp-content/uploads/2020/06/stk2-300x300.jpg'
