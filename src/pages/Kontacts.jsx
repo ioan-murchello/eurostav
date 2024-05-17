@@ -4,7 +4,7 @@ import { FaMapSigns } from 'react-icons/fa';
 import { RiMailAddLine } from 'react-icons/ri';
 import { PiClockCountdownFill } from 'react-icons/pi';
 import { MdOutlineContactPhone } from 'react-icons/md';
-import Form from '../components/Form';
+import CustomForm from '../components/Form';
 
 const Kontacts = () => {
   return (
@@ -81,7 +81,7 @@ const Kontacts = () => {
           </li>
         </ul>
       </div>
-      <Form />
+      <CustomForm />
     </section>
   );
 };

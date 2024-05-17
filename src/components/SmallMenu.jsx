@@ -1,9 +1,37 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
- 
+const fadeInScale = (element, delay = 0, duration = 500) => {
+  let startTime = null;
+
+  const animate = (currentTime) => {
+    if (!startTime) startTime = currentTime;
+    const elapsed = currentTime - startTime - delay;
+
+    if (elapsed >= 0) {
+      const progress = Math.min(elapsed / duration, 1);
+
+      const scale = 0.5 + progress * 0.5;
+      const opacity = progress;
+      const blur = 5 - progress * 5;
+
+      element.style.transform = `scale(${scale})`;
+      element.style.opacity = opacity;
+      element.style.filter = `blur(${blur}px)`;
+      element.style.visibility = 'visible';
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    } else {
+      requestAnimationFrame(animate);
+    }
+  };
+
+  requestAnimationFrame(animate);
+};
+
 const SmallMenu = ({ setOpen, isOpen }) => {
- 
   const location = useLocation();
   const active = location.pathname;
 
@@ -16,12 +44,21 @@ const SmallMenu = ({ setOpen, isOpen }) => {
   };
 
   useEffect(() => {
-     const li = document.querySelectorAll('ul li');
+    const li = document.querySelectorAll('ul li');
+    if (isOpen) {
 
-     li.forEach((item, index) => {
-       item.style.animationDelay = `${(index + 1) * 0.1}s`;
-     });
-  },[])
+      li.forEach((item, index) => {
+        fadeInScale(item, index * 100); 
+      });
+    } else {
+      li.forEach((item) => { 
+        item.style.transform = 'scale(0.5)';
+        item.style.opacity = '0';
+        item.style.filter = 'blur(5px)';
+        item.style.visibility = 'hidden';
+      });
+    }
+  }, [isOpen]);
 
   return (
     <nav
@@ -30,7 +67,7 @@ const SmallMenu = ({ setOpen, isOpen }) => {
       } will-change-transform ease-in-out duration-500 z-40 gap-y-12 p-5 bg-white/95 justify-center lg:hidden `}
     >
       <ul className='flex flex-col h-full gap-x-5 gap-y-5 pt-8'>
-        <li className={`${isOpen ? 'animateLi' : ''}`}>
+        <li className='opacity-[0] scale-50 invisible'>
           <Link
             onClick={() => handleOpen()}
             className={`text-2xl ${active === '/' ? 'text-orange-400' : ''}`}
@@ -39,7 +76,7 @@ const SmallMenu = ({ setOpen, isOpen }) => {
             Domu
           </Link>
         </li>
-        <li className={`${isOpen ? 'animateLi' : ''}`}>
+        <li className='opacity-[0] scale-50 invisible'>
           <Link
             onClick={() => handleOpen()}
             className={`text-2xl ${
@@ -50,7 +87,7 @@ const SmallMenu = ({ setOpen, isOpen }) => {
             O Nás
           </Link>
         </li>
-        <li className={`${isOpen ? 'animateLi' : ''}`}>
+        <li className='opacity-[0] scale-50 invisible'>
           <Link
             onClick={() => handleOpen()}
             className={`text-2xl ${
@@ -61,7 +98,7 @@ const SmallMenu = ({ setOpen, isOpen }) => {
             Naše Služby
           </Link>
         </li>
-        <li className={`${isOpen ? 'animateLi' : ''}`}>
+        <li className='opacity-[0] scale-50 invisible'>
           <Link
             onClick={() => handleOpen()}
             className={`text-2xl ${
@@ -72,7 +109,7 @@ const SmallMenu = ({ setOpen, isOpen }) => {
             Reference
           </Link>
         </li>
-        <li className={`${isOpen ? 'animateLi' : ''}`}>
+        <li className='opacity-[0] scale-50 invisible'>
           <Link
             onClick={() => handleOpen()}
             className={`text-2xl ${
