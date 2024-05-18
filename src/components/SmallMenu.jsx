@@ -44,7 +44,8 @@ const SmallMenu = ({ setOpen, isOpen }) => {
   };
 
   useEffect(() => {
-    const li = document.querySelectorAll('ul li');
+    const ul = document.querySelector('.ul-list');
+    const li = ul.querySelectorAll('li');
     if (isOpen) {
 
       li.forEach((item, index) => {
@@ -66,7 +67,7 @@ const SmallMenu = ({ setOpen, isOpen }) => {
         isOpen ? 'translate-x-0' : 'translate-x-[-100%]'
       } will-change-transform ease-in-out duration-500 z-40 gap-y-12 p-5 bg-white/95 justify-center lg:hidden `}
     >
-      <ul className='flex flex-col h-full gap-x-5 gap-y-5 pt-8'>
+      <ul className='flex flex-col h-full gap-x-5 gap-y-5 pt-8 ul-list'>
         <li className='opacity-[0] scale-50 invisible'>
           <Link
             onClick={() => handleOpen()}
