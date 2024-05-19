@@ -11,16 +11,15 @@ import { toTop } from '../helpers';
 const Home = () => {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <div className='relative w-full sm:h-full flex flex-col justify-center items-center mb-32'>
+      <div className='relative w-full h-screen sm:h-[400px] flex flex-col justify-center items-center mb-32'>
         <Slider
-          viewheight='100vh'
+          viewheight='screen'
           height={400}
           perWiew='1'
           swipe={true}
           touchMode={false}
           spaceBetween={0}
-          flag={true}
-          delayTime={3000}
+          delayTime={3000} 
         />
         <div className='flex absolute justify-center  items-center flex-col gap-y-5 left-0 right-0 z-10'>
           <BsHouseHeartFill className='w-[50px] h-[50px] text-white' />

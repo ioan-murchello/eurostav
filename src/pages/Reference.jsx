@@ -64,15 +64,13 @@ const Reference = () => {
           Zateplení a obkladačské práci.
         </div>
 
-        <div className='col-span-2'>
+        <div className='h-[200px] col-span-2'>
           <Slider
-            viewheight='200px'
-            height={200}
-            perWiew='2'
+            height='200px'
+            perWiew={2}
             swipe={false}
             touchMode={true}
             spaceBetween='10'
-            flag={false}
             forNavigation={true}
             delayTime={2500}
           />
@@ -83,15 +81,13 @@ const Reference = () => {
           Rodinné domy
         </div>
 
-        <div className='col-span-2'>
+        <div className='h-[200px] col-span-2'>
           <Slider
-            viewheight='200px'
-            height={200}
+            height='200px'
             perWiew='3'
             swipe={false}
             touchMode={true}
             spaceBetween='10'
-            flag={false}
             forNavigation={true}
             delayTime={3200}
           />
