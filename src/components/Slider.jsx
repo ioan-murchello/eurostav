@@ -3,10 +3,10 @@ import { Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 
-const Slider = ({shoulDisableSwipe}) => {
+const Slider = () => {
   return (
     <Swiper
-      className='w-full h-[400px]'
+      className='w-full h-[100vh] sm:h-[400px]'
       modules={[Autoplay]}
       speed={2000}
       slidesPerView={1}
@@ -18,7 +18,7 @@ const Slider = ({shoulDisableSwipe}) => {
     >
       <SwiperSlide>
         <img
-          className='w-full h-[400px] object-cover'
+          className='w-full h-[100%] sm:h-[400px] object-cover'
           src='https://www.hashmicro.com/blog/wp-content/uploads/2022/10/Tools-16.jpg'
           alt=''
         />
@@ -26,7 +26,7 @@ const Slider = ({shoulDisableSwipe}) => {
 
       <SwiperSlide>
         <img
-          className='w-full h-[400px] object-cover'
+          className='w-full h-[100%] sm:h-[400px] object-cover'
           src='https://proest.com/wp-content/uploads/2022/11/Building-Construction-Process-From-Start-To-Finish.jpg'
           alt=''
         />
@@ -34,7 +34,7 @@ const Slider = ({shoulDisableSwipe}) => {
 
       <SwiperSlide>
         <img
-          className='w-full h-[400px] object-cover'
+          className='w-full h-[100%] sm:h-[400px] object-cover'
           src='https://iknyte.com/media/posts/3/construction.jpg'
           alt=''
         />
@@ -42,7 +42,7 @@ const Slider = ({shoulDisableSwipe}) => {
 
       <SwiperSlide>
         <img
-          className='w-full h-[400px] object-cover'
+          className='w-full h-[100%] sm:h-[400px] object-cover'
           src='https://cammconstructioninc.com/wp-content/uploads/2018/12/building-construction-sunset.jpg'
           alt=''
         />
@@ -50,7 +50,7 @@ const Slider = ({shoulDisableSwipe}) => {
 
       <SwiperSlide>
         <img
-          className='w-full h-[400px] object-cover'
+          className='w-full h-[100%] sm:h-[400px] object-cover'
           src='https://cloudfront-us-east-1.images.arcpublishing.com/tgam/CIQXIPAXLJB3JPXWGXYMHKWEZM.jpg'
           alt=''
         />
