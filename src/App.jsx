@@ -7,6 +7,7 @@ import {
   Kontacts,
 } from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,7 +20,7 @@ function App() {
           <Route path='kontacts' element={<Kontacts/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> 
   );
 }
 

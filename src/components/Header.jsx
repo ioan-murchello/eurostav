@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
   return (
     <header 
-      className='flex w-full justify-between items-center py-5 px-4'
+      className=' container mx-auto flex justify-between items-center py-5 px-4'
     >
       <div className='flex items-center gap-x-4'>
         <MdConstruction className='w-12 h-12 sm:w-20 sm:h-20' />

@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Formik, Form } from 'formik';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import * as YUP from 'yup';
 
 const schema = YUP.object().shape({
@@ -15,14 +16,14 @@ const CustomForm = () => {
       const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json;c harset=UTF-8',
+          'Content-Type': 'application/json; charset=UTF-8',
         },
         body: JSON.stringify(obj),
       });
       if(res.status === 201){
-        alert('I wrhite you soon')
+       toast.success('Thank you! I will contakt You soon')
       }else{
-        console.log('error', res.status);
+        toast.error('Ooops... Some error with server. Try later')
       }
       console.log(res)
       return res;

@@ -3,13 +3,14 @@ import { GiArrowScope } from 'react-icons/gi';
 import { TbArrowsSplit2 } from 'react-icons/tb';
 import { FaArrowsToDot } from 'react-icons/fa6';
 import Title from '../components/Title';
+import aboutUs from '../img/aboutusbg.jpeg'
 
 const About = () => {
   return (
     <section className='mb-32'>
       <Title
         title='O nas'
-        bg='https://wallsneedlove.com/cdn/shop/products/w0267_1s_Realistic-Bricks-Removable-Peel-and-Stick-Wallpaper_For-Home-Offices-1.jpg?v=1604088879'
+        bg={aboutUs}
       />
       <div className='container mx-auto grid grid-cols-1 lg:grid-cols-2 py-8 px-4 gap-5'>
         <div className='flex flex-col gap-y-5'>

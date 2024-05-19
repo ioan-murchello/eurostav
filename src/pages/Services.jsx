@@ -1,10 +1,10 @@
 import Title from '../components/Title';
-
-import { MdOutlineTimer } from 'react-icons/md';
+ 
 import { GrPlan } from 'react-icons/gr';
 import { BsFillCalendarHeartFill } from 'react-icons/bs';
 import { FaMoneyBillTrendUp } from 'react-icons/fa6';
 import { PiClockCounterClockwiseBold } from 'react-icons/pi';
+import ourServises from '../img/our-servises.jpg'
 
 import { motion } from 'framer-motion';
 
@@ -39,16 +39,13 @@ const Services = () => {
 
   return (
     <section>
-      <Title
-        title='Nase sluzby'
-        bg='https://st.hzcdn.com/simgs/2521130e01e97eca_14-2448/home-design.jpg'
-      />
+      <Title title='Nase sluzby' bg={ourServises} />
       <div className='container mx-auto grid grid-cols-1 lg:grid-cols-2 py-8 px-4 gap-5'>
         <div className='flex flex-col gap-y-5'>
           <h2 className='text-3xl text-orange-600'>Naše Služby</h2>
           <motion.h3
-            initial={{ opacity: 0,  x: 20, }}
-            animate={{ opacity: 1,  x: 0, }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className='text-2xl'
           >
